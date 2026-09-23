@@ -1,0 +1,23 @@
+{
+  "name": "research-paper-workflow",
+  "version": "0.1.0",
+  "description": "A traceable, evidence-first AI workflow for research positioning, quantitative analysis, manuscript drafting, independent review, submission packaging, and revision tracking.",
+  "author": {
+    "name": "Zeyu"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Research Paper Workflow",
+    "shortDescription": "Build and audit evidence-traceable research papers.",
+    "longDescription": "A modular workflow that keeps data, results, figures, claims, manuscript text, independent review, and submission records linked. Includes a P2 Tibetan Plateau-Arctic sea-ice adapter.",
+    "developerName": "Zeyu",
+    "category": "Research",
+    "capabilities": [],
+    "defaultPrompt": "Use the research-paper-workflow to audit evidence before drafting, preserve uncertainty, and keep every manuscript claim traceable to local results.",
+    "websiteURL": "https://github.com/l3263254135-dotcom/research-paper-workflow"
+  },
+  "homepage": "https://github.com/l3263254135-dotcom/research-paper-workflow",
+  "repository": "https://github.com/l3263254135-dotcom/research-paper-workflow",
+  "license": "MIT",
+  "keywords": ["research", "paper", "evidence", "writing", "codex-plugin"]
+}

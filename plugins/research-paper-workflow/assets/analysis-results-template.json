@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "results": [
+    {
+      "result_id": "R001",
+      "variable": "",
+      "unit": "",
+      "region": "",
+      "season": "",
+      "contrast": "",
+      "window": "",
+      "n": null,
+      "estimate": null,
+      "ci_low": null,
+      "ci_high": null,
+      "test": "",
+      "p_exact": null,
+      "q_value": null,
+      "script_path": "",
+      "input_hash": "",
+      "status": "blocked"
+    }
+  ]
+}

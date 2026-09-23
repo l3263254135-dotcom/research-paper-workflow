@@ -1,0 +1,10 @@
+- claim_id: C001
+  text: ""
+  evidence_ids: []
+  result_ids: []
+  figure_ids: []
+  evidence_level: to_verify
+  alternative_explanations: []
+  limitations: []
+  allowed_verbs: [shows, is consistent with]
+  status: blocked

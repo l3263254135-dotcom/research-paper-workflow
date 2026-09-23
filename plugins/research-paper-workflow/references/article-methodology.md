@@ -1,0 +1,15 @@
+# 公众号方法论：可核验摘要
+
+来源：用户提供的中文方法论 PDF（本地材料，2026-09-23）。公开仓库不记录原始文件路径；如需复核，请在本地重新提供该材料。
+
+## ARTICLE-SUPPORTED
+
+文章提出从文字驱动转向数据驱动、文件驱动和可审计流程：先整理数据、脚本、统计结果、图表和核心 claim，再生成初稿。它把 `Agent` 解释为 `Model + Harness`，其中 harness 包括上下文、工具、文件、记忆、规则、权限和执行循环。
+
+文章的端到端产物包括：目标期刊材料包、研究问题与贡献、项目配置、`analysis_results.json`、图表、`draft.md`、`review_round_N.md`、`revision_log_round_N.md`、`score_history.json`、`claims.yaml`、`claim_calibration.md`、`citations_todo.md`、AI 披露、DOCX 和 Cover Letter。
+
+文章建议：先按期刊范围和证据门槛定位；把每个主要结果记录为 estimate、CI、n、检验、精确 p 和脚本路径；每张图绑定一个 claim；由一个 AI 生成、另一个独立进程压力测试；按措辞、引用/统计/限制等类别分轮修改；对 claims 做双 AI 独立校准；返修使用“意见—判断—行动—证据—位置—回复—状态”表。
+
+## 限制
+
+这是课程/公众号方法建议，不是目标期刊的官方保证，也不证明自动评分等同同行评审。AI 不能代替作者的科学判断、数据核验、署名决定或投稿决定。
