@@ -54,7 +54,7 @@ scan() {
   hits=$(rg --hidden -n -I \
     --glob '!.git/**' --glob '!node_modules/**' --glob '!dist/**' \
     --glob '!*.png' --glob '!*.jpg' --glob '!*.pdf' \
-    --glob '!*.sqlite' --glob '!*.icns' --glob '!scripts/publish-project.sh' \
+    --glob '!*.sqlite' --glob '!*.icns' --glob '!**/scripts/publish-project.sh' \
     '(/Users/[^/[:space:]]+/|/home/[^/[:space:]]+/|gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|BEGIN (RSA |OPENSSH |EC )?PRIVATE KEY)' \
     "$target") || {
       local code=$?
@@ -71,11 +71,27 @@ scan() {
 scan "$repo_dir"
 git -C "$repo_dir" diff --check
 git -C "$repo_dir" diff --cached --check
-git -C "$repo_dir" fetch --quiet origin main
-git -C "$repo_dir" merge-base --is-ancestor origin/main HEAD || {
-  printf 'Local main is behind or diverged from origin/main; reconcile it before publishing.\n' >&2
-  exit 1
-}
+remote_head=$(gh api "repos/l3263254135-dotcom/$project/git/ref/heads/main" --jq '.object.sha' 2>/dev/null) || remote_head=
+if [[ -z "$remote_head" ]]; then
+  [[ "$(gh api "repos/l3263254135-dotcom/$project" --jq '.size')" == 0 ]] || {
+    printf 'Remote main is unavailable in a nonempty repository.\n' >&2
+    exit 1
+  }
+fi
+if [[ -n "$remote_head" ]]; then
+  published_local=$(git -C "$repo_dir" config --get publish.last-local || true)
+  published_remote=$(git -C "$repo_dir" config --get publish.last-remote || true)
+  if [[ -n "$published_remote" && "$published_remote" != "$remote_head" ]]; then
+    printf 'Remote main changed since the last publish; reconcile it before publishing.\n' >&2
+    exit 1
+  fi
+  anchor=$remote_head
+  [[ -n "$published_local" ]] && anchor=$published_local
+  git -C "$repo_dir" merge-base --is-ancestor "$anchor" HEAD || {
+    printf 'Local main is behind or diverged from remote main; reconcile it before publishing.\n' >&2
+    exit 1
+  }
+fi
 
 if [[ "$kind" == plugin ]]; then
   changes=$(rsync -ain --delete --exclude='.DS_Store' --exclude='.git/' "$source_dir/" "$plugin_dir/")
@@ -101,12 +117,14 @@ fi
 scan "$repo_dir"
 git -C "$repo_dir" add -A
 git -C "$repo_dir" diff --cached --check
-if git -C "$repo_dir" diff --cached --quiet; then
-  printf 'No changes to publish for %s.\n' "$project"
-else
+if ! git -C "$repo_dir" diff --cached --quiet; then
   [[ -n "$message" ]] || message="chore: publish $project update"
   git -C "$repo_dir" commit -m "$message"
-  git -C "$repo_dir" push origin main
+fi
+if [[ -n "$remote_head" && "$remote_head" == "$(git -C "$repo_dir" rev-parse HEAD)" ]]; then
+  printf 'No changes to publish for %s.\n' "$project"
+else
+  (cd "$repo_dir" && python3 "$script_dir/push-via-api.py" l3263254135-dotcom "$project")
 fi
 if [[ "$kind" == plugin && -n "$changes" ]]; then
   codex plugin add "$project@personal"
