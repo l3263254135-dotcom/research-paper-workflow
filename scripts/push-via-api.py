@@ -5,6 +5,9 @@ import base64
 import json
 import subprocess
 import sys
+import urllib.error
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 
 
 def run(*args, data=None):
@@ -16,11 +19,22 @@ def git(*args):
     return run("git", *args)
 
 
+TOKEN = run("gh", "auth", "token")
+
+
 def api(method, endpoint, payload=None):
-    command = ["gh", "api", "-X", method, endpoint]
-    if payload is not None:
-        command += ["--input", "-"]
-    return json.loads(run(*command, data=json.dumps(payload).encode() if payload is not None else None))
+    request = urllib.request.Request(
+        "https://api.github.com/" + endpoint,
+        data=json.dumps(payload).encode() if payload is not None else None,
+        headers={"Authorization": f"Bearer {TOKEN}", "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28", "Content-Type": "application/json"},
+        method=method,
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return json.load(response)
+    except urllib.error.HTTPError as error:
+        body = error.read().decode(errors="replace")
+        raise RuntimeError(f"GitHub API {method} {endpoint}: HTTP {error.code}: {body}") from error
 
 
 def person(commit, role):
@@ -70,7 +84,7 @@ def main():
         return
 
     for commit in commits:
-        entries = []
+        local_entries = {}
         for line in subprocess.check_output(["git", "ls-tree", "-rz", commit]).split(b"\0"):
             if not line:
                 continue
@@ -78,14 +92,42 @@ def main():
             mode, kind, sha = metadata.decode().split()
             if kind != "blob":
                 raise SystemExit(f"Unsupported Git entry {kind}: {path!r}")
-            contents = subprocess.check_output(["git", "cat-file", "blob", sha])
+            local_entries[path.decode()] = (mode, sha)
+
+        remote_entries = {}
+        if remote:
+            remote_commit = api("GET", f"{base}/commits/{remote}")
+            remote_tree = api("GET", f"{base}/trees/{remote_commit['tree']['sha']}?recursive=1")
+            remote_entries = {
+                item["path"]: (item.get("mode"), item.get("sha"))
+                for item in remote_tree.get("tree", [])
+                if item.get("type") == "blob"
+            }
+        changed_paths = sorted(set(local_entries) | set(remote_entries))
+        changed_paths = [path for path in changed_paths if local_entries.get(path) != remote_entries.get(path)]
+        files = [
+            (local_entries[path][0], path, local_entries[path][1], subprocess.check_output(["git", "cat-file", "blob", local_entries[path][1]]))
+            for path in changed_paths if path in local_entries
+        ]
+
+        def upload(item):
+            mode, path, sha, contents = item
             blob = api("POST", f"{base}/blobs", {
                 "content": base64.b64encode(contents).decode(), "encoding": "base64"
             })["sha"]
+            return mode, path, sha, blob
+
+        with ThreadPoolExecutor(max_workers=12) as pool:
+            uploaded = list(pool.map(upload, files))
+        entries = [{"path": path, "mode": "100644", "type": "blob", "sha": None} for path in changed_paths if path not in local_entries]
+        for mode, path, sha, blob in uploaded:
             if blob != sha:
                 raise SystemExit(f"Blob mismatch: {path!r}")
-            entries.append({"path": path.decode(), "mode": mode, "type": "blob", "sha": blob})
-        tree = api("POST", f"{base}/trees", {"tree": entries})["sha"]
+            entries.append({"path": path, "mode": mode, "type": "blob", "sha": blob})
+        tree_payload = {"tree": entries}
+        if remote:
+            tree_payload["base_tree"] = remote_commit["tree"]["sha"]
+        tree = api("POST", f"{base}/trees", tree_payload)["sha"]
         expected_tree = git("rev-parse", f"{commit}^{{tree}}")
         if tree != expected_tree:
             raise SystemExit(f"Tree mismatch: {commit} ({tree} != {expected_tree})")
