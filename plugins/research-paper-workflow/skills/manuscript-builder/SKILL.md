@@ -1,6 +1,6 @@
 ---
 name: manuscript-builder
-description: Build or revise a scientific manuscript from verified result and claim records while preserving numbers, citations, uncertainty, and conclusion strength.
+description: Build or revise a scientific manuscript from verified result and claim records while preserving numbers, citations, uncertainty, conclusion strength, and readable scientific structure.
 ---
 
 # Manuscript Builder
@@ -19,6 +19,17 @@ Use the target journal's article type. Unless its instructions require another o
 - Keep internal QA/version language out of scientific prose; retain it in audit files.
 - Put unverified citations in `citations_todo.md`; never invent DOI, reference, method, or configuration.
 - Keep figures, captions, tables, SI, abstract, and conclusion at the same evidence strength.
+- Use one primary function per paragraph and maintain old-information -> new-information flow.
+- Prefer direct subjects and verbs; inspect tense, parallel structure, comparison, negation, and misplaced modifiers.
+- Remove vague intensifiers, unsupported novelty language, biased wording, and avoidable ambiguity.
+- Treat title, abstract, introduction, results, discussion, and conclusion as a connected argument rather than isolated sections.
 
-Before delivery, run numeric consistency checks and list residual blockers. A fluent draft is not submission-ready evidence.
+## Five-pass editing order
 
+1. Scientific argument: question -> method -> result -> claim.
+2. Structure: section order, reader path, evidence placement, and transitions.
+3. Paragraphs: unity, coherence, topic sentences, and old/new information.
+4. Sentences: subject-verb distance, voice, tense, parallelism, comparisons, and modifiers.
+5. Words: concision, precision, bias control, ambiguity, and claim strength.
+
+Before delivery, run numeric consistency and manuscript traceability checks and list residual blockers. A fluent draft is not submission-ready evidence.

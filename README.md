@@ -1,8 +1,18 @@
 # Research Paper Workflow
 
-A Codex plugin for evidence-first research papers: research positioning, data and result audit, manuscript drafting, independent review, submission checks, and revision tracking. The optional P2 adapter adds bounded analysis rules for Tibetan Plateau height and Arctic sea-ice research.
+A Codex plugin for evidence-first research papers: publishability checks, project harness setup, data and result audit, figure-to-claim tracing, manuscript drafting, dual-AI independent review, submission checks, revision tracking, and optional science communication. The optional P2 adapter adds bounded analysis rules for Tibetan Plateau height and Arctic sea-ice research.
 
-The workflow keeps results, figures, claims, and manuscript text traceable. It does not replace scientific judgment or author decisions. See [usage-playbook.md](plugins/research-paper-workflow/usage-playbook.md) for phase prompts.
+The workflow keeps questions, results, figures, claims, manuscript text, review findings, and submission records traceable. It reports scientific quality and presentation quality separately, preserves `BLOCKED` dependencies, and does not replace scientific judgment or author decisions. See [usage-playbook.md](plugins/research-paper-workflow/usage-playbook.md) for phase prompts.
+
+Core stages:
+
+1. Publishability and journal positioning
+2. AI harness and evidence contract
+3. Analysis and figure arguments
+4. Manuscript construction and five-pass editing
+5. Dual-AI pressure testing and claim calibration
+6. Submission, revision, and proof checks
+7. Optional conference and public communication
 
 ## Install from GitHub
 

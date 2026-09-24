@@ -1,0 +1,15 @@
+schema_version: "1.0"
+project_id: ""
+research_question: ""
+primary_hypothesis: ""
+alternative_hypotheses: []
+target_journal: ""
+article_type: ""
+data_boundary: "local-only-until-authorized"
+method_constraints: []
+generator_role: ""
+critic_role: ""
+process_isolation_verified: false
+author_decisions_pending: []
+provenance_labels: [BOOK-SUPPORTED, ARTICLE-SUPPORTED, INTERNAL-BASELINE, OUR-DESIGN, BLOCKED-SOURCE]
+status: "BLOCKED"

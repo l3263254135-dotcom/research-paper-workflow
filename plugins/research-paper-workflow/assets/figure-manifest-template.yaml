@@ -1,0 +1,10 @@
+figures:
+  - figure_id: F001
+    title: ""
+    caption: ""
+    claim_ids: []
+    result_ids: []
+    source_files: []
+    units: []
+    uncertainty: ""
+    status: "blocked"

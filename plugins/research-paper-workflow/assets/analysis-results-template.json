@@ -16,6 +16,8 @@
       "test": "",
       "p_exact": null,
       "q_value": null,
+      "effect_size": null,
+      "effect_size_type": "",
       "script_path": "",
       "input_hash": "",
       "status": "blocked"

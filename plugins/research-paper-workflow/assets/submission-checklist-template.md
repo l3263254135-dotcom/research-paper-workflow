@@ -7,3 +7,5 @@
 | Data/code/materials statement | BLOCKED | | | |
 | AI disclosure | BLOCKED | | | |
 | Figures, SI, references | BLOCKED | | | |
+| Version manifest and merged PDF | BLOCKED | | | |
+| Proof corrections | BLOCKED | | | |
