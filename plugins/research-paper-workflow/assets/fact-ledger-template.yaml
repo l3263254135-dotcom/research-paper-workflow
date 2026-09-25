@@ -1,0 +1,17 @@
+schema_version: "1.0"
+source_manuscript: manuscript_source.md
+status: blocked
+facts:
+  - fact_id: FACT001
+    source_block: ""
+    fact_type: observation
+    text: ""
+    numeric_tokens: []
+    unit: ""
+    result_ids: []
+    claim_ids: []
+    figure_ids: []
+    limitation: ""
+    evidence_strength: to_verify
+    disposition: preserve
+    author_decision: ""

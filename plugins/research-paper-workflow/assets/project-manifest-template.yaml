@@ -10,6 +10,10 @@ method_constraints: []
 generator_role: ""
 critic_role: ""
 process_isolation_verified: false
+manuscript_mode: standard
+source_manuscript: manuscript_source.md
+reconstruction_approval: pending
+figure_optimization_status: blocked
 author_decisions_pending: []
 provenance_labels: [BOOK-SUPPORTED, ARTICLE-SUPPORTED, INTERNAL-BASELINE, OUR-DESIGN, BLOCKED-SOURCE]
 status: "BLOCKED"

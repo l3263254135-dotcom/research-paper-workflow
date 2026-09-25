@@ -1,7 +1,7 @@
 {
   "name": "research-paper-workflow",
-  "version": "0.2.0+codex.20260924045814",
-  "description": "A traceable, evidence-first dual-AI workflow for research positioning, quantitative analysis, manuscript drafting, independent review, submission packaging, and science communication.",
+  "version": "0.2.0+codex.20260925030208",
+  "description": "A traceable, evidence-first dual-AI workflow for research positioning, quantitative analysis, scientific figure optimization, evidence-preserving manuscript reconstruction, manuscript drafting, independent review, submission packaging, and science communication.",
   "author": {
     "name": "Zeyu"
   },
@@ -9,11 +9,11 @@
   "interface": {
     "displayName": "Research Paper Workflow",
     "shortDescription": "Build and audit evidence-traceable research papers.",
-    "longDescription": "A modular workflow that keeps questions, data, results, figures, claims, manuscript text, independent review, submission records, and communication outputs linked. Includes dual-AI quality gates and a P2 Tibetan Plateau-Arctic sea-ice adapter.",
+    "longDescription": "A modular workflow that keeps questions, data, results, figure plans, claims, manuscript text, independent review, submission records, and communication outputs linked. Includes scientific figure optimization, evidence-preserving manuscript reconstruction, dual-AI quality gates, and a P2 Tibetan Plateau-Arctic sea-ice adapter.",
     "developerName": "Zeyu",
     "category": "Research",
     "capabilities": [],
-    "defaultPrompt": "Use the research-paper-workflow to validate publishability, audit evidence before drafting, preserve uncertainty, and keep every manuscript claim traceable to local results.",
+    "defaultPrompt": "Use the research-paper-workflow to validate publishability, audit evidence before drafting, optimize figures as argument units, reconstruct manuscripts without changing facts, preserve uncertainty, and keep every claim traceable to local results.",
     "websiteURL": "https://github.com/l3263254135-dotcom/research-paper-workflow"
   },
   "homepage": "https://github.com/l3263254135-dotcom/research-paper-workflow",
@@ -24,6 +24,8 @@
     "paper",
     "evidence",
     "writing",
+    "figure-design",
+    "manuscript-reconstruction",
     "review",
     "ai",
     "codex-plugin"

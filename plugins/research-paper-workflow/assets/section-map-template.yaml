@@ -1,0 +1,12 @@
+schema_version: "1.0"
+status: blocked
+sections:
+  - section_id: R001
+    target_section: Results
+    source_blocks: []
+    result_ids: []
+    figure_ids: []
+    claim_ids: []
+    function: ""
+    disposition: preserve
+    transition: ""

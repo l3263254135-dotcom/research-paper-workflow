@@ -19,6 +19,10 @@ def main() -> int:
             errors.append(f"missing {key}")
     if "local-only-until-authorized" not in text:
         errors.append("data_boundary must declare a local default")
+    if re.search(r"^\s*manuscript_mode\s*:\s*reconstruction\b", text, re.M):
+        for key in ("source_manuscript", "reconstruction_approval", "figure_optimization_status"):
+            if not re.search(rf"^\s*{re.escape(key)}\s*:", text, re.M):
+                errors.append(f"reconstruction manifest missing {key}")
     status = "ok" if not errors else "failed"
     out = {"path": str(args.path), "errors": errors, "status": status}
     print(json.dumps(out, ensure_ascii=False, indent=2) if args.json else ("OK" if not errors else "FAILED\n" + "\n".join(errors)))

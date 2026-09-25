@@ -38,6 +38,20 @@ $figure-argument
 ```
 
 ```text
+$figure-optimization
+在已核验结果和 story_spine.yaml 基础上规划图表故事板；
+重新安排主文图、补充图、表格和面板顺序；
+提出不改变数据、统计口径和科学结论的视觉优化，并记录图表变更。
+```
+
+```text
+$manuscript-reconstruction
+将 manuscript_source.md 作为固定事实来源；
+第一阶段生成 fact_ledger.yaml、reconstruction_brief.md、story_spine.yaml、section_map.yaml 和 rewrite_decision_log.md；
+作者将 reconstruction_approval 设置为 approved 后，再按 Results、Discussion、Introduction、Conclusion、Abstract、Title 的顺序逐节重写。
+```
+
+```text
 $manuscript-builder
 仅使用 verified 结果和 claims.yaml 生成正文、图注和 SI；按科学论证、结构、段落、句子、用词五轮检查；
 保留不显著与反向结果，不补事实。

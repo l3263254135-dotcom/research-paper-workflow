@@ -9,6 +9,14 @@
 - Target reader:
 - Target journal/article type:
 
+## Reconstruction mode
+
+- Mode: standard / reconstruction
+- Source manuscript:
+- Reconstruction approval:
+- Core claim:
+- Conclusion boundary:
+
 ## Title candidates
 
 1.
@@ -35,6 +43,11 @@
 
 | Section | Question answered | Result IDs | Figure IDs | Claim IDs |
 |---|---|---|---|---|
+
+## Figure Sequence
+
+| Order | Figure ID | Reader question | Primary claim | Main/Supplement | Why it appears here |
+|---|---|---|---|---|---|
 
 ## Discussion
 

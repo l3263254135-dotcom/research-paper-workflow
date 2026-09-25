@@ -9,12 +9,12 @@ Review the manuscript and its evidence package as an independent process. Do not
 
 ## Review lenses
 
-Check significance and scope, experimental comparability, statistical object and uncertainty, mechanism versus association, figure support, citations, reproducibility, reporting requirements, writing clarity, and reader accessibility.
+Check significance and scope, experimental comparability, statistical object and uncertainty, mechanism versus association, figure support, figure reader path, panel order, caption independence, citations, reproducibility, reporting requirements, writing clarity, and reader accessibility.
 
 Use the critical-reading sequence: title, abstract, background, data and methods, results, conclusion, future work, and references. Review both scientific quality and presentation quality; do not collapse them into a single acceptance probability.
 
 Each finding must include severity, exact location, evidence status, smallest repair, fallback wording if unrepairable, and whether it blocks submission. Calibrate every claim as `strong`, `moderate`, `weak`, or `unsupported`; explain disagreements rather than averaging them away.
 
-Run one issue class per revision round: claim wording, statistics, citations, limitations, figures, structure, or language. Record before/after text and the evidence used for each repair.
+Run one issue class per revision round: claim wording, statistics, citations, limitations, figures, figure captions, structure, or language. For figure findings, record the affected figure/panel, reader question, visual encoding, source result, smallest repair, and whether the change alters manuscript structure. Record before/after text and the evidence used for each repair.
 
 Do not reward cosmetic edits as scientific evidence. Preserve negative, null, reverse, and alternative explanations. Never convert the score into an official acceptance probability.

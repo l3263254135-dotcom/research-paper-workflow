@@ -17,10 +17,11 @@ def main() -> int:
     if row: rows.append(row)
     errors=[]
     for i,r in enumerate(rows,1):
-        for k in ("figure_id","caption","claim_ids","result_ids","status"):
+        for k in ("figure_id","caption","result_ids","status"):
             if k not in r: errors.append(f"row {i}: missing {k}")
-        if r.get("status") == "verified" and (r.get("claim_ids") in {"[]",""} or r.get("result_ids") in {"[]",""}):
-            errors.append(f"row {i}: verified figure needs claim_ids and result_ids")
+        claim_link = r.get("claim_ids") or r.get("primary_claim_id")
+        if r.get("status") == "verified" and (claim_link in {None, "[]", "", '""'} or r.get("result_ids") in {"[]","", '""'}):
+            errors.append(f"row {i}: verified figure needs a claim link and result_ids")
     out={"path":str(args.path),"figures":len(rows),"errors":errors,"status":"ok" if not errors else "failed"}
     print(json.dumps(out,ensure_ascii=False,indent=2) if args.json else ("OK" if not errors else "FAILED\n"+"\n".join(errors)))
     return 0 if not errors else 1

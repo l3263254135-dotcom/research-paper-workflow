@@ -1,10 +1,27 @@
 figures:
   - figure_id: F001
+    role: primary_result
+    reader_question: ""
     title: ""
     caption: ""
-    claim_ids: []
+    primary_claim_id: ""
+    secondary_claim_ids: []
     result_ids: []
+    panel_roles: []
     source_files: []
+    analysis_script: ""
+    data_transform: ""
+    sample_unit: ""
+    denominator: ""
+    time_window: ""
+    comparison_baseline: ""
     units: []
-    uncertainty: ""
+    uncertainty_definition: ""
+    statistical_annotation: ""
+    color_encoding: ""
+    accessibility_check: pending
+    grayscale_check: pending
+    manuscript_locations: []
+    main_or_supplement: main
+    journal_constraints: []
     status: "blocked"
