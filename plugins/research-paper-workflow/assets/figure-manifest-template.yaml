@@ -4,6 +4,7 @@ figures:
     reader_question: ""
     title: ""
     caption: ""
+    artifact_path: ""
     primary_claim_id: ""
     secondary_claim_ids: []
     result_ids: []

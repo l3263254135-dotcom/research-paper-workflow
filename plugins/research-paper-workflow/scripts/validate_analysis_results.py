@@ -4,7 +4,11 @@ from __future__ import annotations
 import argparse, json, math
 from pathlib import Path
 REQ=("result_id","variable","unit","region","season","contrast","window","n","estimate","ci_low","ci_high","test","p_exact","script_path","input_hash","status")
-def finite(x): return isinstance(x,(int,float)) and not isinstance(x,bool) and math.isfinite(x)
+def finite(x):
+    try:
+        return type(x) in (int, float) and math.isfinite(x)
+    except OverflowError:
+        return False
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument("path",type=Path); ap.add_argument("--json",action="store_true"); a=ap.parse_args()
     obj=json.loads(a.path.read_text(encoding="utf-8")); rows=obj.get("results",[]); errors=[]

@@ -19,6 +19,8 @@ Use after positioning and evidence audit. Do not choose a scientific method sole
 
 Each major result should include `result_id`, `variable`, `unit`, `region`, `season`, `contrast`, `window`, `n`, `estimate`, `ci_low`, `ci_high`, `test`, `p_exact`, `script_path`, `input_hash`, and `status`. Add effect-size or domain-specific fields when appropriate.
 
+For the local workflow gate, include `input_files` mapping project-local input files to SHA-256 and use a project-relative `script_path`. Never invent missing inferential statistics or replace them with zero.
+
 ## Acceptance
 
 - Verified results are finite and their intervals are ordered.

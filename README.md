@@ -2,7 +2,7 @@
 
 A Codex plugin for evidence-first research papers: publishability checks, project harness setup, data and result audit, figure planning and optimization, evidence-preserving manuscript reconstruction, manuscript drafting, dual-AI independent review, submission checks, revision tracking, and optional science communication. The optional P2 adapter adds bounded analysis rules for Tibetan Plateau height and Arctic sea-ice research.
 
-The workflow keeps questions, results, figures, claims, manuscript text, review findings, and submission records traceable. It reports scientific quality and presentation quality separately, preserves `BLOCKED` dependencies, and does not replace scientific judgment or author decisions. See [usage-playbook.md](plugins/research-paper-workflow/usage-playbook.md) for phase prompts.
+The workflow keeps questions, results, figures, claims, manuscript text, review findings, and submission records traceable. It reports scientific quality and presentation quality separately, preserves `BLOCKED` dependencies, and does not replace scientific judgment or author decisions. Start with `$research-paper-workflow:idea-to-journal-paper` to compare competing explanations, choose the smallest test that could change the scientific claim, and decide how to revise for each outcome. See [usage-playbook.md](plugins/research-paper-workflow/usage-playbook.md) for phase prompts.
 
 Core stages:
 

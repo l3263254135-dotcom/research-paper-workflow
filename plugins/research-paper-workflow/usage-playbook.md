@@ -1,5 +1,19 @@
 # 使用方法
 
+手上只有 idea、刚收到导师意见，或准备把候选稿收口到首投时，可以直接走 [中文迭代入口](skills/idea-to-journal-paper/SKILL.md)：
+
+```text
+$research-paper-workflow:idea-to-journal-paper
+从我现在的材料进入。先说清前人已做到什么、两个竞争解释有什么不同预测，以及最值得先做哪个检验。
+提前写清支持、无法区分和反证各会改哪条结论；有导师意见时逐份对上被评版本。只在我授权的范围内修改。
+```
+
+入口复用下列阶段 skill。首次使用可先看 [P2 v 线复盘](references/p2-v-iteration-case.md)，实际研究记录可用 [迭代表](assets/paper-iteration-template.md)。
+
+本地检查分 `--stage review` 与 `--stage submission`，见 [记录格式与运行方法](references/readiness-records.md)。前者不会把空表或脚手架判为可审阅；后者需要稿件版本指纹、已核验的审稿访问和作者批准。只有想法时，交问题卡和最小检验，保留阻断，不写发现式正文。
+
+本地安装可用 `codex plugin marketplace add <插件根目录>`，再运行 `codex plugin add research-paper-workflow@research-paper-workflow-local`。安装后在新会话选择 `idea-to-journal-paper`。本地 Python 检查器需要 `requirements.txt` 中的依赖。
+
 在项目目录中显式调用阶段 skill，或先调用总控：
 
 ```text

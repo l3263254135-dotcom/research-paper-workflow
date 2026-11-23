@@ -19,6 +19,7 @@ Treat a figure as part of the reasoning and the reader path, not as decoration a
 ## Acceptance
 
 - No figure exists without a claim, source result, caption, manuscript location, and status.
+- Set `artifact_path` in the figure manifest to the project-relative path of the rendered figure checked in this round.
 - Units, masks, signs, denominators, sample units, and time windows are explicit.
 - Main-text figure order follows the paper's evidence sequence.
 - The figure does not imply a stronger causal or mechanistic conclusion than the evidence supports.

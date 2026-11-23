@@ -1,6 +1,6 @@
 {
   "name": "research-paper-workflow",
-  "version": "0.2.0+codex.20260925030208",
+  "version": "0.3.1",
   "description": "A traceable, evidence-first dual-AI workflow for research positioning, quantitative analysis, scientific figure optimization, evidence-preserving manuscript reconstruction, manuscript drafting, independent review, submission packaging, and science communication.",
   "author": {
     "name": "Zeyu"
@@ -13,7 +13,7 @@
     "developerName": "Zeyu",
     "category": "Research",
     "capabilities": [],
-    "defaultPrompt": "Use the research-paper-workflow to validate publishability, audit evidence before drafting, optimize figures as argument units, reconstruct manuscripts without changing facts, preserve uncertainty, and keep every claim traceable to local results.",
+    "defaultPrompt": "Use idea-to-journal-paper to identify the current research stage and the smallest test that would change the leading scientific claim. Agree on how supporting, inconclusive, and contrary results would change the paper. Do not draft findings without verified evidence or mark submission readiness without the frozen package and author checks.",
     "websiteURL": "https://github.com/l3263254135-dotcom/research-paper-workflow"
   },
   "homepage": "https://github.com/l3263254135-dotcom/research-paper-workflow",

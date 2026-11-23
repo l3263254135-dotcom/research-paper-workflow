@@ -11,6 +11,7 @@ Use before analysis or drafting. Read the supplied literature and project record
 
 - object, treatment/exposure, response, comparison, spatial and temporal scale;
 - one primary hypothesis, at least one alternative, and observable predictions for each;
+- the weakest link between perturbation and outcome, a fair comparator, and the smallest test whose outcomes separate the leading explanations; record what to do if results support, do not discriminate, or contradict the claim (see [mentor decision protocol](../../references/mentor-review-loop.md#0-导师式科学判断));
 - verified knowledge gap, contribution, intended readers, and provisional title;
 - sprint/match/safe journal list with official source URLs and query dates;
 - reasons a candidate is unsuitable and explicit transfer conditions.
@@ -20,7 +21,7 @@ Use before analysis or drafting. Read the supplied literature and project record
 
 ## Constraints
 
-Do not claim novelty, priority, complete mechanism, or causal effect without a verified basis. Separate a phenomenon paper, process-constraint paper, attribution paper, and prediction paper. If the evidence cannot discriminate hypotheses, say so and narrow the contribution.
+Do not claim novelty, priority, complete mechanism, or causal effect without a verified basis. Explain what is still new after the closest primary study, not merely what topics it leaves open. Separate a phenomenon paper, process-constraint paper, attribution paper, and prediction paper. If the evidence cannot discriminate hypotheses, say so and narrow the contribution. If the planned test would produce the same observable outcome under all serious alternatives, redesign it or label it as descriptive.
 
 ## Acceptance
 

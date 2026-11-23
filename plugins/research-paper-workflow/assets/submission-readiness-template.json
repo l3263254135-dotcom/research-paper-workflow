@@ -1,0 +1,17 @@
+{
+  "version": "",
+  "package": {
+    "manuscript": {"path": ""},
+    "supporting_information": {"path": ""},
+    "reproduction_package": {"path": ""},
+    "cover_letter": {"path": ""}
+  },
+  "gates": {
+    "science_and_reproduction": {"status": "pending", "evidence": "", "checked_by": "", "checked_on": ""},
+    "package_consistency": {"status": "pending", "evidence": "", "checked_by": "", "checked_on": ""},
+    "reviewer_access": {"status": "pending", "evidence": "", "checked_by": "", "checked_on": ""},
+    "journal_requirements": {"status": "pending", "evidence": "", "checked_by": "", "checked_on": ""},
+    "author_confirmation": {"status": "pending", "evidence": "", "checked_by": "", "checked_on": ""}
+  },
+  "sha256": {}
+}
