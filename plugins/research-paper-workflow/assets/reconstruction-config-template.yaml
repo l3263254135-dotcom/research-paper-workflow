@@ -1,7 +1,7 @@
 schema_version: "1.0"
 mode: reconstruction
 source_manuscript: manuscript_source.md
-internal_rewrite_order: [Results, Discussion, Introduction, Conclusion, Abstract, Title, Methods, Captions]
+internal_rewrite_order: [Methods, Results, Captions, Discussion, Introduction, Conclusion, Abstract, Title]
 reconstruction_approval: pending
 preserve_facts: true
 allow_new_results: false

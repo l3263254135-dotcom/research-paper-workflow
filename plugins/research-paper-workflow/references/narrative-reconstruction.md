@@ -12,7 +12,7 @@ The story spine should make the following path explicit:
 
 ## Internal rewrite order
 
-Write Results first so the evidence sequence is stable. Write Discussion second so each interpretation is tied to a result and alternative explanation. Rewrite Introduction third so the gap and question lead naturally to the stabilized results. Write Conclusion, Abstract, and Title after the body is stable. Align Methods and captions last.
+Verify the question and Data and Methods against the actual analysis before rewriting. Stabilize the core figure and table sequence, then write Results and captions. Write Discussion so each interpretation is tied to evidence and alternatives. Rewrite Introduction so the gap and question lead to what the results actually answer. Write Conclusion, then Abstract and Title, after the body is stable.
 
 ## Source block disposition
 

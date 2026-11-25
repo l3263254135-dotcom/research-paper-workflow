@@ -16,6 +16,18 @@ Treat a figure as part of the reasoning and the reader path, not as decoration a
 - Check labels, scales, legends, error bars, color accessibility, grayscale behavior, panel order, export formats, and target-journal constraints.
 - Compare figure values with `analysis_results.json`, tables, abstract, Results, Discussion, and Conclusion.
 
+## When the core sequence breaks
+
+Name the missing inference: which reader question remains unanswered, and what result would answer it? If the support is already visible, reorder the evidence or clarify the caption. Otherwise classify the gap before requesting another figure:
+
+| Gap | Action |
+|---|---|
+| Display | A verified result answers the question but is not shown. Add the smallest useful figure, table, or panel, linked to that result. |
+| Analysis | A needed comparison, estimate, or uncertainty check has not been verified. Return to data, methods, and analysis; mark the panel pending until the result is checked. |
+| Design | Available data or design cannot distinguish the explanations or support the claim. Redesign with author agreement, or narrow or withdraw the claim; keep any independently supported finding. |
+
+Record the gap and what would close it in the storyboard or existing ledger. A smoother transition or schematic is not evidence. A check that changes the meaning of a central result must stay visible alongside that result.
+
 ## Acceptance
 
 - No figure exists without a claim, source result, caption, manuscript location, and status.

@@ -9,6 +9,14 @@
 - Target reader:
 - Target journal/article type:
 
+## Data and Methods
+
+- Sources and access:
+- Sample or experiment unit, comparison, and estimand:
+- Missingness, uncertainty, and sensitivity methods:
+- As-run inputs, scripts, and configuration:
+- Planned but not run or exploratory changes (working notes only):
+
 ## Reconstruction mode
 
 - Mode: standard / reconstruction

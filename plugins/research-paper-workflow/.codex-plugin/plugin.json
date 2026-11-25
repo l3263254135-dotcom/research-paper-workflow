@@ -1,19 +1,19 @@
 {
   "name": "research-paper-workflow",
-  "version": "0.3.1",
-  "description": "A traceable, evidence-first dual-AI workflow for research positioning, quantitative analysis, scientific figure optimization, evidence-preserving manuscript reconstruction, manuscript drafting, independent review, submission packaging, and science communication.",
+  "version": "0.3.2",
+  "description": "An evidence-first workflow from a testable scientific question and reproducible methods to figure-led results, manuscript drafting, independent review, and submission preparation.",
   "author": {
     "name": "Zeyu"
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "Research Paper Workflow",
-    "shortDescription": "Build and audit evidence-traceable research papers.",
-    "longDescription": "A modular workflow that keeps questions, data, results, figure plans, claims, manuscript text, independent review, submission records, and communication outputs linked. Includes scientific figure optimization, evidence-preserving manuscript reconstruction, dual-AI quality gates, and a P2 Tibetan Plateau-Arctic sea-ice adapter.",
+    "displayName": "Evidence to Paper",
+    "shortDescription": "Turn a scientific question and verified results into a journal manuscript.",
+    "longDescription": "Define the question, document data and methods, and build the argument from core figures and tables. Repair missing evidence before strengthening the introduction, then write the conclusion and abstract. Includes independent review and submission checks.",
     "developerName": "Zeyu",
     "category": "Research",
     "capabilities": [],
-    "defaultPrompt": "Use idea-to-journal-paper to identify the current research stage and the smallest test that would change the leading scientific claim. Agree on how supporting, inconclusive, and contrary results would change the paper. Do not draft findings without verified evidence or mark submission readiness without the frozen package and author checks.",
+    "defaultPrompt": "Use idea-to-journal-paper from my current stage: define a testable question, document data and methods, and arrange verified core figures and tables into an argument. If the argument breaks, identify whether it needs a new display, a new analysis, or a narrower claim. Then strengthen the introduction and write the conclusion before the abstract. Stop at missing evidence or author approval; do not submit.",
     "websiteURL": "https://github.com/l3263254135-dotcom/research-paper-workflow"
   },
   "homepage": "https://github.com/l3263254135-dotcom/research-paper-workflow",

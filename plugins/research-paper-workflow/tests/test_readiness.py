@@ -8,6 +8,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import yaml
+
 
 PLUGIN = Path(os.environ.get("PAPER_WORKFLOW_PLUGIN", Path(__file__).resolve().parents[1]))
 
@@ -93,6 +95,16 @@ class ReadinessTest(unittest.TestCase):
         self.assertIn("analysis_results.json: no records", self.audit("BLOCKED"))
         self.audit("NOT_READY_FOR_SUBMISSION", "submission")
         self.assertFalse((self.root / "draft.md").exists())
+
+    def test_scaffold_defaults_to_methods_first(self):
+        subprocess.run([sys.executable, str(PLUGIN / "scripts/scaffold_research_project.py"), str(self.root)],
+                       check=True, capture_output=True)
+        config = yaml.safe_load((self.root / "reconstruction_config.yaml").read_text())
+        self.assertEqual(config["internal_rewrite_order"], [
+            "Methods", "Results", "Captions", "Discussion", "Introduction", "Conclusion", "Abstract", "Title",
+        ])
+        plan = (self.root / "analysis_plan.md").read_text()
+        self.assertLess(plan.index("## Planned"), plan.index("## As Run"))
 
     def test_complete_fixture_passes_both_local_stages(self):
         self.controlled_fixture()

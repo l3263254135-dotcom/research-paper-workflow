@@ -1,19 +1,18 @@
-# Research Paper Workflow
+# Evidence to Paper
 
 A Codex plugin for evidence-first research papers: publishability checks, project harness setup, data and result audit, figure planning and optimization, evidence-preserving manuscript reconstruction, manuscript drafting, dual-AI independent review, submission checks, revision tracking, and optional science communication. The optional P2 adapter adds bounded analysis rules for Tibetan Plateau height and Arctic sea-ice research.
 
 The workflow keeps questions, results, figures, claims, manuscript text, review findings, and submission records traceable. It reports scientific quality and presentation quality separately, preserves `BLOCKED` dependencies, and does not replace scientific judgment or author decisions. Start with `$research-paper-workflow:idea-to-journal-paper` to compare competing explanations, choose the smallest test that could change the scientific claim, and decide how to revise for each outcome. See [usage-playbook.md](plugins/research-paper-workflow/usage-playbook.md) for phase prompts.
 
-Core stages:
+Default working order (separate from the journal's section order):
 
-1. Publishability and journal positioning
-2. AI harness and evidence contract
-3. Analysis and figure arguments
-4. Figure planning, redesign, and audit
-5. Manuscript reconstruction or standard construction
-6. Dual-AI pressure testing and claim calibration
-7. Submission, revision, and proof checks
-8. Optional conference and public communication
+1. Define a testable scientific question and check its contribution against prior work.
+2. Document data and methods before new analysis; keep planned and executed methods separate.
+3. Arrange verified figures and tables to answer successive questions, then write Results and Discussion. If the argument has a gap, display an existing result, run the missing analysis, or narrow the claim to what the design can support.
+4. Strengthen the Introduction and research significance based on what the results answer.
+5. Write the bounded Conclusion, then condense the argument into the Abstract.
+
+Follow with independent review and submission checks. The plugin display name changed; its ID and skill commands remain unchanged.
 
 ## Install from GitHub
 

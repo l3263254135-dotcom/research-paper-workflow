@@ -10,7 +10,7 @@ Use this skill after verified analysis and before manuscript reconstruction. Tre
 ## Process
 
 1. Read `analysis_results.json`, `claims.yaml`, `figure_manifest.yaml`, and `story_spine.yaml` when available.
-2. Build `figure_plan.yaml` and `figure_storyboard.md` before proposing visual edits.
+2. Build `figure_plan.yaml` and `figure_storyboard.md` before proposing visual edits. Use [gap triage](../figure-argument/SKILL.md#when-the-core-sequence-breaks) if the sequence cannot answer the stated question; visual optimization cannot create missing evidence.
 3. Assign each figure a role such as orientation, primary result, comparison, robustness, alternative explanation, null result, mechanism constraint, or supplementary verification.
 4. Decide main-text versus supplementary placement and order panels as problem -> evidence -> comparison -> bounded interpretation.
 5. Propose visual changes to chart type, panel order, axes, labels, annotations, legend, color, line type, spacing, and export settings.

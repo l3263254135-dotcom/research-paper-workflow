@@ -1,7 +1,7 @@
 {
   "name": "research-paper-workflow",
   "interface": {
-    "displayName": "Research Paper Workflow"
+    "displayName": "Evidence to Paper"
   },
   "plugins": [
     {

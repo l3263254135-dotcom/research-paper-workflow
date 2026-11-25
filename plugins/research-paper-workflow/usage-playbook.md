@@ -1,11 +1,14 @@
-# 使用方法
+# Evidence to Paper（证据成稿）使用方法
+
+默认推进：**科学问题 → 数据与方法 → 核心图表与结果 → 引言与研究意义 → 结论 → 摘要**。这是工作顺序，交付时按期刊要求排版。可以从现有阶段接手，不需要重做已核验的工作。
 
 手上只有 idea、刚收到导师意见，或准备把候选稿收口到首投时，可以直接走 [中文迭代入口](skills/idea-to-journal-paper/SKILL.md)：
 
 ```text
 $research-paper-workflow:idea-to-journal-paper
-从我现在的材料进入。先说清前人已做到什么、两个竞争解释有什么不同预测，以及最值得先做哪个检验。
-提前写清支持、无法区分和反证各会改哪条结论；有导师意见时逐份对上被评版本。只在我授权的范围内修改。
+从我现在的材料进入。先定可检验的科学问题，写清数据与方法；再按子问题排核心图表和结果。
+指出断点是缺图、缺分析，还是设计不支持结论。结果明确后再补强引言，先写结论再写摘要。
+提前约定支持、无法区分和反证各会改哪条结论；有导师意见时逐份对上被评版本。
 ```
 
 入口复用下列阶段 skill。首次使用可先看 [P2 v 线复盘](references/p2-v-iteration-case.md)，实际研究记录可用 [迭代表](assets/paper-iteration-template.md)。
@@ -14,13 +17,15 @@ $research-paper-workflow:idea-to-journal-paper
 
 本地安装可用 `codex plugin marketplace add <插件根目录>`，再运行 `codex plugin add research-paper-workflow@research-paper-workflow-local`。安装后在新会话选择 `idea-to-journal-paper`。本地 Python 检查器需要 `requirements.txt` 中的依赖。
 
+例如，核心图表没有展示已核验的对照，就补最小的图板或表；对照还未做，就返回分析；设计先天分不开两种解释，就保留可靠现象、收窄解释。不要把三种情况都当成“补图”。
+
 在项目目录中显式调用阶段 skill，或先调用总控：
 
 ```text
 $workflow-orchestrator
 先盘点资料并建立 task_plan.md、findings.md、progress.md；
-依次完成可发表性、证据契约、分析、图表、写作、交叉审稿和投稿检查；
-完成证据审计前不要生成摘要，缺项标记 BLOCKED。
+先定问题、写数据与方法，再分析并核验图表；图表顺序确认后写结果和讨论，随后写引言、结论和摘要；
+最后做交叉审稿和投稿检查。缺项标记 BLOCKED。
 ```
 
 ```text
@@ -62,7 +67,7 @@ $figure-optimization
 $manuscript-reconstruction
 将 manuscript_source.md 作为固定事实来源；
 第一阶段生成 fact_ledger.yaml、reconstruction_brief.md、story_spine.yaml、section_map.yaml 和 rewrite_decision_log.md；
-作者将 reconstruction_approval 设置为 approved 后，再按 Results、Discussion、Introduction、Conclusion、Abstract、Title 的顺序逐节重写。
+作者将 reconstruction_approval 设置为 approved 后，先核写 Data and Methods，再按核心图表顺序写 Results 和图注，最后写 Discussion、Introduction、Conclusion、Abstract 和 Title。
 ```
 
 ```text

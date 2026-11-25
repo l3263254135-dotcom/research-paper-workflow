@@ -9,10 +9,11 @@
 - minimum publishable unit decision;
 - title no stronger than the evidence.
 
-## Gate 1 — Evidence contract
+## Gate 1 — Data and methods
 
 - project configuration and data boundary recorded;
 - inputs, scripts, configurations, and hashes discoverable;
+- methods plan precedes new analysis, and the manuscript describes the verified as-run method;
 - missing dependencies labelled `BLOCKED`;
 - provenance separated between method advice and local science evidence.
 
@@ -24,6 +25,7 @@
 - units, masks, signs, captions, and uncertainty are explicit;
 - labels, scales, legends, colors, grayscale behavior, and export constraints are reviewed;
 - figure order supports the evidence sequence;
+- a gap in display, analysis, or design is routed to the appropriate repair before prose drafting;
 - null, reverse, failed, and alternative results are preserved.
 
 ## Gate 3 — Manuscript reconstruction
@@ -37,6 +39,7 @@
 ## Gate 4 — Manuscript
 
 - title, abstract, introduction, results, discussion, conclusion, figures, and methods tell one consistent story;
+- the results support the introduction's promise, and the abstract adds nothing beyond the bounded conclusion and evidence in the body;
 - numeric and claim traceability checks pass;
 - paragraph, sentence, word, citation, and style passes are complete;
 - no unsupported causal, novelty, or mechanism language remains.

@@ -9,7 +9,14 @@ Draft only from verified `analysis_results.json`, `claims.yaml`, source records,
 
 When `mode: reconstruction` is active, also require `manuscript_source.md`, `fact_ledger.yaml`, `story_spine.yaml`, `section_map.yaml`, `figure_plan.yaml`, and an approved reconstruction status. Preserve the source manuscript and write a new `manuscript_reconstructed.md`.
 
-## Structure
+## Drafting order
+
+1. Verify the scientific question and that the written data and methods match what was run. Keep planned analyses out of completed Methods and Results.
+2. Write Results and captions in the approved evidence sequence, then Discussion. If a claim has no evidential bridge, use [figure gap triage](../figure-argument/SKILL.md#when-the-core-sequence-breaks) before finishing the draft.
+3. Rewrite the Introduction against those results: establish the documented gap, why resolving it matters, and the exact question the paper answers. Remove promises the study cannot fulfill.
+4. Write the Conclusion as a direct, bounded answer to the question. Then write the Abstract from the completed argument and align the Title. Do not introduce results or implications not supported by the body.
+
+## Rendered structure
 
 Use the target journal's article type. Unless its instructions require another order: Title, Key Points/Abstract, Introduction, Results, Discussion, Conclusions, Methods, Figures/Tables, References, Data/Code/AI disclosures.
 
@@ -25,7 +32,7 @@ Use the target journal's article type. Unless its instructions require another o
 - Prefer direct subjects and verbs; inspect tense, parallel structure, comparison, negation, and misplaced modifiers.
 - Remove vague intensifiers, unsupported novelty language, biased wording, and avoidable ambiguity.
 - Treat title, abstract, introduction, results, discussion, and conclusion as a connected argument rather than isolated sections.
-- In reconstruction mode, organize Results according to the approved figure and evidence sequence, then write Discussion, Introduction, Conclusion, Abstract, and Title from the stabilized story spine.
+- In reconstruction mode, follow the approved story spine and the same drafting order; preserve the source and its qualifiers.
 - Keep an explicit mapping from every rewritten section and paragraph to source blocks, result IDs, claim IDs, and figure IDs.
 
 ## Five-pass editing order

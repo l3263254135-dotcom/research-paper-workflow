@@ -28,7 +28,7 @@ R1 must state the core question, core claim, evidence ladder, role of every majo
 
 Do not generate `manuscript_reconstructed.md` until `reconstruction_status.yaml` or `project_manifest.yaml` contains `reconstruction_approval: approved`.
 
-Rewrite internally in this order: Results, Discussion, Introduction, Conclusion, Abstract, Title, then Methods and captions. Render the final manuscript in the target journal's required order. Keep stable result, claim, figure, and source markers during drafting.
+First check and revise Data and Methods against the source ledger and actual analysis records. Confirm the core figure/table sequence, then write Results with captions, Discussion, Introduction, Conclusion, Abstract, and Title. If a planned change needs new evidence, return to analysis or narrow the claim instead of treating the rewrite as a source of facts. Render the final manuscript in the target journal's required order. Keep stable result, claim, figure, and source markers during drafting.
 
 ## Fact preservation
 

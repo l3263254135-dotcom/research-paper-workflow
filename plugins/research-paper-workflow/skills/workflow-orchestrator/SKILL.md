@@ -15,7 +15,7 @@ Scientific question, evidence quality, and claim boundaries outrank prose polish
 
 1. Inspect the project before changing it. Preserve existing versions and never overwrite an artifact unless explicitly requested.
 2. Create or update `task_plan.md`, `findings.md`, and `progress.md`; record inputs, hashes, commands, outputs, status, and unresolved blockers.
-3. Route work through this order: publishability, project harness, evidence/data audit, analysis, figure optimization and audit, manuscript reconstruction or standard manuscript build, cross-review, submission/revision, optional communication. Do not generate an abstract from unverified results.
+3. Default production order: scientific question -> data and methods -> verified core figures/tables and Results -> Introduction and significance -> Conclusion -> Abstract. Enter at the current stage and revisit upstream decisions only when a gap affects the claim. This is a work order, not the journal's section order. Cross-review and submission checks follow the draft.
 4. Use `BLOCKED` for missing inputs. Complete independent tasks and state exactly which claims are blocked.
 5. Keep provenance labels visible: `BOOK-SUPPORTED`, `ARTICLE-SUPPORTED`, `INTERNAL-BASELINE`, `OUR-DESIGN`, and `BLOCKED-SOURCE`.
 6. Maintain the minimum closed loop: `data -> analysis_results.json -> figure -> claim -> draft -> review_round_1`.
@@ -28,13 +28,13 @@ Scientific question, evidence quality, and claim boundaries outrank prose polish
 
 Run `$research-positioning`. Benchmark the proposed increment against the closest primary work and strongest applicable baseline. Require a falsifiable question, target readers, and an observation that discriminates the leading hypothesis from a credible alternative, with comparable conditions and a result-to-decision plan. With only an idea, deliver provisional positioning and the smallest decision-changing test; do not create a findings-based draft or mark results verified.
 
-### Gate 1 — Evidence contract
+### Gate 1 — Data and methods
 
-Run `$ai-research-production` and `$evidence-data-audit`. Require project configuration, data boundaries, source hashes, a methods record, and an input -> script -> result -> figure -> claim ledger.
+Run `$ai-research-production` and `$evidence-data-audit`. Write a data and methods record before running new analysis: sources, sample or experiment units, comparison, estimand, missing-data rules, uncertainty, and sensitivity checks. Keep planned methods separate from executed methods; the latter must match the actual scripts and run configuration. Require project configuration, data boundaries, source hashes, and an input -> script -> result -> figure -> claim ledger.
 
 ### Gate 2 — Analysis and visual argument
 
-Run `$analysis-build`, `$figure-optimization`, and `$figure-argument`. Calibrate the measurement or method on an appropriate known case and a fair baseline where relevant before using it to support novelty. Plan each figure around a question and a comparison, with a fallback if the required evidence fails. Separate detection, temporal or spatial fingerprints, model dependence, and causal identification. Require reproducible results, uncertainty, figure-to-result links, and no silent replacement of missing values.
+Run `$analysis-build`, `$figure-argument`, and `$figure-optimization`. Calibrate the method on a known case and a fair baseline where relevant. Arrange verified figures and tables as answers to successive subquestions, with an explicit connection between each pair. Use the [gap triage](../figure-argument/SKILL.md#when-the-core-sequence-breaks) before drafting: plot verified evidence that is missing from the display, return to Gates 1-2 for missing analysis, or revisit Gate 0 and narrow or withdraw a claim the design cannot support. Require reproducible results, uncertainty, figure-to-result links, and no silent replacement of missing values.
 
 ### Gate 3 — Manuscript reconstruction
 
@@ -44,7 +44,7 @@ In standard mode, continue with the standard manuscript path and write `draft.md
 
 ### Gate 4 — Manuscript
 
-Run `$manuscript-builder`. Require approved outline, verified claims, traceable numbers, calibrated language, and consistent evidence strength across title, abstract, figures, discussion, and conclusion.
+Run `$manuscript-builder`. Use the as-run methods and approved figure sequence to establish Results and Discussion. Then write Introduction and significance against what those results actually answer, followed by Conclusion and Abstract. Require a traceable outline, verified claims, and consistent evidence strength across the manuscript.
 
 ### Gate 5 — Independent pressure test
 
